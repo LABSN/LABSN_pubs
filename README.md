@@ -1,5 +1,5 @@
-LABSN_pubs
-==========
+pubs
+====
 
 LABS^N's completed and published experiments
 
