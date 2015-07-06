@@ -1,0 +1,19 @@
+# directories
+stimuli/pitchObjects
+stimuli/manipulationObjects
+stimuli/rawRecordings
+stimuli/pitchDataFromManip
+expyfun
+processedData
+rawData
+
+# file types
+*.log
+*.ai
+*.pdf
+
+# files
+stimSelection/alternativeCategories.txt
+stimuli/soundToManipulationNotes.txt
+dprimeANOVASummaries.txt
+

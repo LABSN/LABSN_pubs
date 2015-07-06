@@ -1,0 +1,17 @@
+# directories
+rawData
+processedData
+documents
+oldStuff
+rawRecordings
+variables
+hrtf
+
+# file types
+*.pdf
+analysis/*.pickle
+analysis/*.tsv
+
+# files
+glmerModelSummaries.txt
+analysis/alldata.mat

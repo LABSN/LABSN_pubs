@@ -1,0 +1,15 @@
+
+This experiment involves small and large categories of words.  
+
+Before you start, you'll do a quick categorization task so you are sure of which words go in which categories. 
+
+
+
+Great. In the experiment, the categories will be associated with different spatial locations, and you will need to push a button when you hear a word coming from that location that doesn't match the category.
+
+There will be five training steps so you can get used to the stimuli, with detailed instructions on screen at each step.
+
+After passing training, there will be six blocks of 20 trials each: three blocks of the 3-word categories, and three blocks of the 6-word categories.
+
+Any questions?
+

@@ -1,0 +1,246 @@
+MM_NULL
+
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( probit )
+Formula: press ~ truth + (1 | subj)
+   Data: wl
+Control: glmerControl(optCtrl = list(maxfun = 20000))
+
+     AIC      BIC   logLik deviance df.resid 
+ 10761.6  10799.4  -5376.8  10753.6    92156 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.7952 -0.0657 -0.0610 -0.0547 20.1322 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ subj   (Intercept) 0.005536 0.0744  
+Number of obs: 92160, groups:  subj, 16
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.68670    0.02657 -101.10   <2e-16 ***
+truthtarget  3.32603    0.02732  121.73   <2e-16 ***
+truthfoil    1.30584    0.04520   28.89   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) trthtr
+truthtarget -0.498       
+truthfoil   -0.298  0.291
+
+
+MM_PART
+
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( probit )
+Formula: press ~ truth * adj * idn * num + (1 | subj)
+   Data: wl
+Control: glmerControl(optCtrl = list(maxfun = 20000))
+
+     AIC      BIC   logLik deviance df.resid 
+ 10527.8  10763.6  -5238.9  10477.8    92135 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.5473 -0.0667 -0.0595 -0.0516 26.3977 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ subj   (Intercept) 0.006115 0.0782  
+Number of obs: 92160, groups:  subj, 16
+
+Fixed effects:
+                                      Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                          -2.687193   0.027949  -96.15  < 2e-16 ***
+truthtarget                           3.330227   0.028882  115.31  < 2e-16 ***
+truthfoil                             1.226592   0.052980   23.15  < 2e-16 ***
+
+adjTRUE                              -0.005408   0.039677   -0.14 0.891592    
+idnTRUE                              -0.026635   0.039696   -0.67 0.502238    
+numthree                             -0.109098   0.039721   -2.75 0.006021 ** 
+adjTRUE:idnTRUE                      -0.293061   0.079291   -3.70 0.000219 ***
+adjTRUE:numthree                      0.052867   0.079215    0.67 0.504529    
+idnTRUE:numthree                     -0.083571   0.079286   -1.05 0.291859    
+adjTRUE:idnTRUE:numthree             -0.095291   0.158732   -0.60 0.548292    
+
+truthtarget:adjTRUE                   0.085525   0.057375    1.49 0.136055    
+truthtarget:idnTRUE                   0.072565   0.057383    1.26 0.206025    
+truthtarget:numthree                  0.489383   0.057428    8.52  < 2e-16 ***
+truthtarget:adjTRUE:idnTRUE           0.945287   0.114812    8.23  < 2e-16 ***
+truthtarget:adjTRUE:numthree         -0.193639   0.114448   -1.69 0.090658 .  
+truthtarget:idnTRUE:numthree         -0.104209   0.114735   -0.91 0.363740    
+truthtarget:adjTRUE:idnTRUE:numthree  0.209511   0.228298    0.92 0.358773    
+
+truthfoil:adjTRUE                    -0.482661   0.105724   -4.57 4.99e-06 ***
+truthfoil:idnTRUE                     0.035756   0.105983    0.34 0.735830    
+truthfoil:numthree                    0.395894   0.106110    3.73 0.000191 ***
+truthfoil:adjTRUE:idnTRUE            -0.721129   0.210309   -3.43 0.000606 ***
+truthfoil:adjTRUE:numthree           -0.127395   0.211772   -0.60 0.547464    
+truthfoil:idnTRUE:numthree            0.106841   0.210604    0.51 0.611938    
+truthfoil:adjTRUE:idnTRUE:numthree   -0.294030   0.425129   -0.69 0.489172    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+                 (Intr) trthtr trthfl adTRUE idTRUE numthr trthtrgt:djTRUE
+truthtarget      -0.497                                                   
+truthfoil        -0.268  0.261                                            
+adjTRUE           0.125 -0.121 -0.065                                     
+idnTRUE           0.149 -0.144 -0.079  0.041                              
+numthree          0.096 -0.094 -0.051  0.003  0.080                       
+trthtrgt:djTRUE  -0.087  0.172  0.045 -0.691 -0.028 -0.002                
+trthfl:djTRUE    -0.047  0.045  0.407 -0.374 -0.016 -0.001  0.259         
+trthtrgt:dnTRUE  -0.103  0.184  0.055 -0.028 -0.691 -0.055 -0.010         
+trthfl:dnTRUE    -0.056  0.054  0.257 -0.014 -0.375 -0.030  0.010         
+adTRUE:TRUE       0.029 -0.028 -0.014  0.209  0.176  0.039 -0.144         
+trthtrgt:nm      -0.068  0.109  0.036 -0.002 -0.056 -0.692  0.004         
+trthfl:nmth      -0.036  0.034 -0.110 -0.001 -0.029 -0.375  0.001         
+adjTRUE:nmt       0.002 -0.001 -0.002  0.135  0.040  0.177 -0.093         
+idnTRUE:nmt       0.057 -0.055 -0.030  0.041  0.136  0.209 -0.028         
+trtht:TRUE:TRUE  -0.021 -0.008  0.010 -0.144 -0.121 -0.027  0.184         
+trthf:TRUE:TRUE  -0.010  0.010  0.179 -0.078 -0.066 -0.013  0.054         
+trthtrgt:djTRUE: -0.001  0.003  0.002 -0.093 -0.028 -0.122  0.107         
+trthfl:djTRUE:    0.000 -0.001 -0.061 -0.050 -0.014 -0.066  0.034         
+trthtrgt:dnTRUE: -0.039  0.037  0.021 -0.028 -0.094 -0.144  0.028         
+trthfl:dnTRUE:   -0.020  0.020 -0.011 -0.017 -0.049 -0.079  0.012         
+aTRUE:TRUE:       0.028 -0.027 -0.012  0.080  0.002  0.041 -0.056         
+trtht:TRUE:TRUE: -0.019  0.028  0.008 -0.054 -0.002 -0.028  0.036         
+trthf:TRUE:TRUE: -0.010  0.010 -0.004 -0.033  0.000 -0.018  0.023         
+                 trthfl:djTRUE trthtrgt:dnTRUE trthfl:dnTRUE adTRUE:TRUE trtht:
+truthtarget                                                                    
+truthfoil                                                                      
+adjTRUE                                                                        
+idnTRUE                                                                        
+numthree                                                                       
+trthtrgt:djTRUE                                                                
+trthfl:djTRUE                                                                  
+trthtrgt:dnTRUE   0.011                                                        
+trthfl:dnTRUE     0.179         0.259                                          
+adTRUE:TRUE      -0.077        -0.121          -0.063                          
+trthtrgt:nm       0.001         0.037           0.021        -0.027            
+trthfl:nmth      -0.060         0.020          -0.012        -0.014       0.259
+adjTRUE:nmt      -0.051        -0.028          -0.016         0.081      -0.122
+idnTRUE:nmt      -0.016        -0.094          -0.052         0.001      -0.145
+trtht:TRUE:TRUE   0.053         0.172           0.044        -0.691       0.028
+trthf:TRUE:TRUE   0.255         0.045           0.406        -0.372       0.009
+trthtrgt:djTRUE:  0.036         0.028           0.012        -0.056       0.173
+trthfl:djTRUE:   -0.110         0.009          -0.001        -0.030       0.045
+trthtrgt:dnTRUE:  0.010         0.108           0.036         0.000       0.185
+trthfl:dnTRUE:    0.001         0.033          -0.110         0.000       0.055
+aTRUE:TRUE:      -0.027        -0.001           0.003         0.133      -0.028
+trtht:TRUE:TRUE:  0.017         0.004          -0.003        -0.090      -0.010
+trthf:TRUE:TRUE: -0.009         0.000          -0.063        -0.051       0.012
+                 trthf: adTRUE: iTRUE: trtht:TRUE:TRUE trthf:TRUE:TRUE
+truthtarget                                                           
+truthfoil                                                             
+adjTRUE                                                               
+idnTRUE                                                               
+numthree                                                              
+trthtrgt:djTRUE                                                       
+trthfl:djTRUE                                                         
+trthtrgt:dnTRUE                                                       
+trthfl:dnTRUE                                                         
+adTRUE:TRUE                                                           
+trthtrgt:nm                                                           
+trthfl:nmth                                                           
+adjTRUE:nmt      -0.067                                               
+idnTRUE:nmt      -0.077  0.042                                        
+trtht:TRUE:TRUE   0.008 -0.055   0.000                                
+trthf:TRUE:TRUE  -0.003 -0.032   0.002  0.257                         
+trthtrgt:djTRUE:  0.046 -0.690  -0.031  0.037           0.024         
+trthfl:djTRUE:    0.411 -0.373  -0.014  0.018          -0.008         
+trthtrgt:dnTRUE:  0.052 -0.029  -0.691  0.002          -0.003         
+trthfl:dnTRUE:    0.260 -0.019  -0.371 -0.002          -0.060         
+aTRUE:TRUE:      -0.019  0.209   0.181 -0.089          -0.043         
+trtht:TRUE:TRUE:  0.013 -0.143  -0.127  0.103           0.028         
+trthf:TRUE:TRUE:  0.187 -0.082  -0.068  0.031          -0.110         
+                 trthtrgt:djTRUE: trthfl:djTRUE: trthtrgt:dnTRUE:
+truthtarget                                                      
+truthfoil                                                        
+adjTRUE                                                          
+idnTRUE                                                          
+numthree                                                         
+trthtrgt:djTRUE                                                  
+trthfl:djTRUE                                                    
+trthtrgt:dnTRUE                                                  
+trthfl:dnTRUE                                                    
+adTRUE:TRUE                                                      
+trthtrgt:nm                                                      
+trthfl:nmth                                                      
+adjTRUE:nmt                                                      
+idnTRUE:nmt                                                      
+trtht:TRUE:TRUE                                                  
+trthf:TRUE:TRUE                                                  
+trthtrgt:djTRUE:                                                 
+trthfl:djTRUE:    0.257                                          
+trthtrgt:dnTRUE: -0.008            0.010                         
+trthfl:dnTRUE:    0.014            0.183          0.256          
+aTRUE:TRUE:      -0.144           -0.078         -0.126          
+trtht:TRUE:TRUE:  0.182            0.052          0.178          
+trthf:TRUE:TRUE:  0.056            0.259          0.048          
+                 trthfl:dnTRUE: aTRUE:TRUE: trtht:TRUE:TRUE:
+truthtarget                                                 
+truthfoil                                                   
+adjTRUE                                                     
+idnTRUE                                                     
+numthree                                                    
+trthtrgt:djTRUE                                             
+trthfl:djTRUE                                               
+trthtrgt:dnTRUE                                             
+trthfl:dnTRUE                                               
+adTRUE:TRUE                                                 
+trthtrgt:nm                                                 
+trthfl:nmth                                                 
+adjTRUE:nmt                                                 
+idnTRUE:nmt                                                 
+trtht:TRUE:TRUE                                             
+trthf:TRUE:TRUE                                             
+trthtrgt:djTRUE:                                            
+trthfl:djTRUE:                                              
+trthtrgt:dnTRUE:                                            
+trthfl:dnTRUE:                                              
+aTRUE:TRUE:      -0.073                                     
+trtht:TRUE:TRUE:  0.052         -0.690                      
+trthf:TRUE:TRUE:  0.412         -0.381       0.263          
+
+
+MODEL COMPARISON
+
+Data: wl
+Models:
+mm_null: press ~ truth + (1 | subj)
+mm_part: press ~ truth * adj * idn * num + (1 | subj)
+        Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)    
+mm_null  4 10762 10799 -5376.8    10754                             
+mm_part 25 10528 10764 -5238.9    10478 275.84     21  < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+       Df             AIC             BIC            logLik     
+ Min.   : 4.00   Min.   :10528   Min.   :10764   Min.   :-5377  
+ 1st Qu.: 9.25   1st Qu.:10586   1st Qu.:10773   1st Qu.:-5342  
+ Median :14.50   Median :10645   Median :10781   Median :-5308  
+ Mean   :14.50   Mean   :10645   Mean   :10781   Mean   :-5308  
+ 3rd Qu.:19.75   3rd Qu.:10703   3rd Qu.:10790   3rd Qu.:-5273  
+ Max.   :25.00   Max.   :10762   Max.   :10799   Max.   :-5239  
+                                                                
+    deviance         Chisq           Chi Df     Pr(>Chisq)
+ Min.   :10478   Min.   :275.8   Min.   :21   Min.   :0   
+ 1st Qu.:10547   1st Qu.:275.8   1st Qu.:21   1st Qu.:0   
+ Median :10616   Median :275.8   Median :21   Median :0   
+ Mean   :10616   Mean   :275.8   Mean   :21   Mean   :0   
+ 3rd Qu.:10685   3rd Qu.:275.8   3rd Qu.:21   3rd Qu.:0   
+ Max.   :10754   Max.   :275.8   Max.   :21   Max.   :0   
+                 NA's   :1       NA's   :1    NA's   :1   
+
+
+BITS OF INFORMATION DIFFERENCE
+
+(AIC(mm_null) - AIC(mm_part)) * log2(exp(1))
+[1] 337.3638

@@ -1,0 +1,55 @@
+DIV ATTN SEMANTIC						
+	Estimate	Std. Error	z value	Pr(>|z|)		Interpretation
+(Intercept)	-2.62082	0.03333	-78.64	2E-16	***	Baseline response level to non-target non-foil items across all conditions.
+target	3.309	0.02936	112.7	2E-16	***	Baseline response level to targets across all conditions.
+foil	0.973	0.05521	17.62	2E-16	***	Baseline response level to foils across all conditions.
+						
+semantic	0.20886	0.01931	10.81	2E-16	***	Moderate overall bias to respond more in the semantic trials than in the phonetic trials. May be an artifact of greater number of semantic trials.
+selective	-0.04132	0.0141	-2.93	0.00339	**	Very small overall bias to respond less in the selective attention trials than in the divided attention trials. May be an artifact of difference in number of targets. Magnitude too small to care about.
+separated	-0.01047	0.02285	-0.46	0.64673		
+semantic : selective	0.03061	0.0141	2.17	0.02997	*	Very small overall bias to respond more in the semantic selective attention trials than in the semantic divided attention trials. May reflect difficulty of semantic divided attention trials. Magnitude too small to care about.
+semantic : separated	-0.01301	0.02285	-0.57	0.56908		
+						
+target : semantic	-0.71932	0.02919	-24.64	2E-16	***	Responses to targets less likely in semantic trials than phonetic trials (difference of about 0.7 on a dprime scale).
+target : selective	0.26206	0.02116	12.38	2E-16	***	Responses to targets more likely in selective attention trials than divided attention trials (difference of about 0.3 on a dprime scale).
+target : separated	-0.05463	0.03479	-1.57	0.11636		
+target : semantic : selective	0.02937	0.02116	1.39	0.16517		
+target : semantic : separated	0.05751	0.0348	1.65	0.09837		
+						
+foil : semantic	-0.36644	0.05522	-6.64	3.23E-11	***	Responses to foils less likely in semantic trials than phonetic trials (difference of about 0.4 on a dprime scale).
+foil : selective	-0.09306	0.03974	-2.34	0.01918	*	Responses to foils less likely in selective attention trials than divided attention trials (difference of about 0.1 on a dprime scale).
+foil : separated	0.29165	0.06633	4.4	1.1E-05	***	Responses to foils more likely in spatially separated divided attention trials than in spatially adjacent divided attention trials (difference of about 0.3 on a dprime scale).
+foil : semantic : selective	0.02372	0.03971	0.6	0.55025		
+foil : semantic : separated	-0.20821	0.06635	-3.14	0.0017	**	Responses to foils less likely in spatially separated semantic trials than in spatially adjacent semantic trials (difference of about 0.2 on a dprime scale).
+						
+						
+						
+DAS COG LOAD						
+Predictor	Estimate	Std. Error	z value	Pr(>|z|)		Interpretation
+(Intercept)	-2.687193	0.02795	-96.14	2E-16	***	Baseline response level to non-target non-foil items across all conditions.
+target	3.330227	0.028882	115.3	2E-16	***	Baseline response level to targets across all conditions.
+foil	1.226592	0.053008	23.14	2E-16	***	Baseline response level to foils across all conditions.
+						
+adjacent	-0.002704	0.019856	-0.14	0.891687		
+identical	-0.013318	0.019856	-0.67	0.502407		
+three	-0.054549	0.019858	-2.75	0.006014	**	Small overall bias to respond less in trials with three-word categories than six-word categories (difference of < 0.1 on a dprime scale).
+adjacent : identical	-0.073265	0.019857	-3.69	0.000225	***	Small overall bias to respond less in trials with adjacent attended streams that have identical categories (difference of < 0.1 on a dprime scale).
+adjacent : three	0.013217	0.019854	0.67	0.505607		
+identical : three	-0.020893	0.019855	-1.05	0.29267		
+adjacent : identical : three	-0.011911	0.019854	-0.6	0.548535		
+						
+target : adjacent	0.042763	0.028703	1.49	0.136266		
+target : identical	0.036282	0.028709	1.26	0.2063		
+target : three	0.244692	0.028711	8.52	2E-16	***	Responses to targets more likely in trials with 3-word categories than with 6-word categories (difference of about 0.2 on a dprime scale).
+target : adjacent : identical	0.236322	0.028708	8.23	2E-16	***	Responses to targets more likely in trials with adjacent attended streams that have identical categories (difference of about 0.2 on a dprime scale).
+target : adjacent : three	-0.04841	0.028705	-1.69	0.091707		
+target : identical : three	-0.026052	0.028704	-0.91	0.364077		
+target : adjacent : identical : three	0.026189	0.028701	0.91	0.361513		
+						
+foil : adjacent	-0.24133	0.05299	-4.55	5.26E-06	***	Responses to foils less likely in trials with adjacent attended streams than with spatially separated attended streams (difference of about 0.2 on a dprime scale).
+foil : identical	0.017878	0.05298	0.34	0.735777		
+foil : three	0.197947	0.053008	3.73	0.000188	***	Responses to foils more likely in trials with 3-word categories than with 6-word categories (difference of about 0.2 on a dprime scale).
+foil : adjacent : identical	-0.180282	0.052984	-3.4	0.000667	***	Responses to foils less likely in trials with adjacent attended streams that have identical categories (difference of about 0.2 on a dprime scale).
+foil : adjacent : three	-0.031849	0.052987	-0.6	0.547796		
+foil : identical : three	0.02671	0.052964	0.5	0.614045		
+foil : adjacent : identical : three	-0.036754	0.052985	-0.69	0.487893		

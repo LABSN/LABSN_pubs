@@ -1,0 +1,191 @@
+MM_NULL
+
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( probit )
+Formula: press ~ truth + (1 | subj)
+   Data: wl
+Control: glmerControl(optCtrl = list(maxfun = 20000))
+
+     AIC      BIC   logLik deviance df.resid 
+ 16000.2  16038.7  -7996.1  15992.2   112316 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.5728 -0.0858 -0.0810 -0.0702 16.5386 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ subj   (Intercept) 0.00746  0.08637 
+Number of obs: 112320, groups:  subj, 13
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.50786    0.02774  -90.40   <2e-16 ***
+truthtarget  2.98161    0.02220  134.33   <2e-16 ***
+truthfoil    0.89814    0.04732   18.98   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) trthtr
+truthtarget -0.320       
+truthfoil   -0.148  0.185
+
+
+MM_PART
+
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( probit )
+Formula: press ~ truth * sel * sem + (1 | subj)
+   Data: wl
+
+     AIC      BIC   logLik deviance df.resid 
+ 14771.9  14954.9  -7367.0  14733.9   112301 
+
+Scaled residuals: 
+   Min     1Q Median     3Q    Max 
+-4.189 -0.097 -0.081 -0.056 37.005 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ subj   (Intercept) 0.009534 0.09764 
+Number of obs: 112320, groups:  subj, 13
+
+Fixed effects:
+                           Estimate Std. Error z value Pr(>|z|)    
+neither (Intercept)        -2.62083    0.03336  -78.55  < 2e-16 ***
+target                      3.30901    0.02942  112.46  < 2e-16 ***
+foil                        0.97302    0.05546   17.54  < 2e-16 ***
+
+semantic                    0.41772    0.03874   10.78  < 2e-16 ***
+selective                  -0.12398    0.04286   -2.89  0.00382 ** 
+adjacent                    0.02095    0.04622    0.45  0.65034    
+semantic:selective          0.18370    0.08631    2.13  0.03331 *  
+semantic:adjacent           0.05203    0.09297    0.56  0.57569    
+
+target:semantic            -1.43865    0.05858  -24.56  < 2e-16 ***
+target:selective            0.78621    0.06415   12.26  < 2e-16 ***
+target:adjacent             0.10927    0.07032    1.55  0.12023    
+target:semantic:selective   0.17610    0.12918    1.36  0.17282    
+target:semantic:adjacent   -0.23005    0.14176   -1.62  0.10464    
+
+foil:semantic              -0.73291    0.11140   -6.58 4.73e-11 ***
+foil:selective             -0.27916    0.12131   -2.30  0.02138 *  
+foil:adjacent              -0.58333    0.13513   -4.32 1.58e-05 ***
+foil:semantic:selective     0.14221    0.25030    0.57  0.56993    
+foil:semantic:adjacent      0.83287    0.28034    2.97  0.00297 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+                  (Intr) trthtr trthfl seladj selsel smTRUE trthtrgt:sld
+truthtarget       -0.389                                                
+truthfoil         -0.204  0.233                                         
+seladj            -0.002  0.002 -0.006                                  
+selsel             0.052 -0.060 -0.032 -0.001                           
+semTRUE           -0.395  0.450  0.239 -0.012 -0.122                    
+trthtrgt:sld       0.001  0.019  0.005 -0.663  0.002  0.008             
+trthfl:sldj        0.000  0.001  0.266 -0.355  0.008  0.005  0.236      
+trthtrgt:sls      -0.036  0.074  0.021  0.002 -0.673  0.082 -0.017      
+trthfl:slsl       -0.018  0.021  0.045  0.005 -0.367  0.043 -0.005      
+trthtr:TRUE        0.264 -0.604 -0.159  0.008  0.080 -0.663 -0.028      
+trthfl:TRUE        0.139 -0.159 -0.280  0.012  0.041 -0.351 -0.009      
+sldj:smTRUE       -0.007  0.009  0.013 -0.641  0.011 -0.002  0.428      
+slsl:smTRUE       -0.071  0.082  0.043  0.011 -0.729  0.091 -0.009      
+trthtrgt:sld:TRUE  0.006 -0.030 -0.010  0.427 -0.009  0.000 -0.572      
+trthfl:sld:TRUE    0.003 -0.003 -0.188  0.236 -0.015 -0.002 -0.160      
+trthtrgt:sls:TRUE  0.048 -0.097 -0.028 -0.009  0.494 -0.062  0.023      
+trthfl:sls:TRUE    0.024 -0.029 -0.044 -0.011  0.278 -0.031  0.010      
+                  trthfl:sld trthtrgt:sls trthfl:sls trtht:TRUE trthf:TRUE
+truthtarget                                                               
+truthfoil                                                                 
+seladj                                                                    
+selsel                                                                    
+semTRUE                                                                   
+trthtrgt:sld                                                              
+trthfl:sldj                                                               
+trthtrgt:sls      -0.007                                                  
+trthfl:slsl       -0.193      0.247                                       
+trthtr:TRUE       -0.005     -0.096       -0.029                          
+trthfl:TRUE       -0.189     -0.027       -0.038      0.233               
+sldj:smTRUE        0.232     -0.008       -0.010      0.001     -0.011    
+slsl:smTRUE       -0.012      0.493        0.272     -0.061     -0.031    
+trthtrgt:sld:TRUE -0.156      0.023        0.009      0.021      0.009    
+trthfl:sld:TRUE   -0.271      0.012        0.143      0.001      0.275    
+trthtrgt:sls:TRUE  0.010     -0.647       -0.186      0.072      0.021    
+trthfl:sls:TRUE    0.138     -0.190       -0.319      0.021      0.039    
+                  sld:TRUE sls:TRUE trthtrgt:sld:TRUE trthfl:sld:TRUE
+truthtarget                                                          
+truthfoil                                                            
+seladj                                                               
+selsel                                                               
+semTRUE                                                              
+trthtrgt:sld                                                         
+trthfl:sldj                                                          
+trthtrgt:sls                                                         
+trthfl:slsl                                                          
+trthtr:TRUE                                                          
+trthfl:TRUE                                                          
+sldj:smTRUE                                                          
+slsl:smTRUE       -0.002                                             
+trthtrgt:sld:TRUE -0.666    0.003                                    
+trthfl:sld:TRUE   -0.365    0.014    0.246                           
+trthtrgt:sls:TRUE  0.002   -0.677   -0.017            -0.013         
+trthfl:sls:TRUE    0.009   -0.379   -0.010            -0.203         
+                  trthtrgt:sls:TRUE
+truthtarget                        
+truthfoil                          
+seladj                             
+selsel                             
+semTRUE                            
+trthtrgt:sld                       
+trthfl:sldj                        
+trthtrgt:sls                       
+trthfl:slsl                        
+trthtr:TRUE                        
+trthfl:TRUE                        
+sldj:smTRUE                        
+slsl:smTRUE                        
+trthtrgt:sld:TRUE                  
+trthfl:sld:TRUE                    
+trthtrgt:sls:TRUE                  
+trthfl:sls:TRUE    0.260           
+
+
+MODEL COMPARISON
+
+Data: wl
+Models:
+mm_null: press ~ truth + (1 | subj)
+mm_part: press ~ truth * sel * sem + (1 | subj)
+        Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)    
+mm_null  4 16000 16039 -7996.1    15992                             
+mm_part 19 14772 14955 -7367.0    14734 1258.3     15  < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+       Df             AIC             BIC            logLik     
+ Min.   : 4.00   Min.   :14772   Min.   :14955   Min.   :-7996  
+ 1st Qu.: 7.75   1st Qu.:15079   1st Qu.:15226   1st Qu.:-7839  
+ Median :11.50   Median :15386   Median :15497   Median :-7682  
+ Mean   :11.50   Mean   :15386   Mean   :15497   Mean   :-7682  
+ 3rd Qu.:15.25   3rd Qu.:15693   3rd Qu.:15768   3rd Qu.:-7524  
+ Max.   :19.00   Max.   :16000   Max.   :16039   Max.   :-7367  
+                                                                
+    deviance         Chisq          Chi Df     Pr(>Chisq)
+ Min.   :14734   Min.   :1258   Min.   :15   Min.   :0   
+ 1st Qu.:15048   1st Qu.:1258   1st Qu.:15   1st Qu.:0   
+ Median :15363   Median :1258   Median :15   Median :0   
+ Mean   :15363   Mean   :1258   Mean   :15   Mean   :0   
+ 3rd Qu.:15678   3rd Qu.:1258   3rd Qu.:15   3rd Qu.:0   
+ Max.   :15992   Max.   :1258   Max.   :15   Max.   :0   
+                 NA's   :1      NA's   :1    NA's   :1   
+
+
+BITS OF INFORMATION DIFFERENCE
+
+(AIC(mm_null) - AIC(mm_part)) * log2(exp(1))
+[1] 1772.095

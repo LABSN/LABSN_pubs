@@ -1,0 +1,4 @@
+*.pyc
+template_JASA_docx.txt
+detect_non_ascii.py
+testing/

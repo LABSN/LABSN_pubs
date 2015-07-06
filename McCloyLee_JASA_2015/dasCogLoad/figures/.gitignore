@@ -1,0 +1,10 @@
+# directories
+dan head source files
+poster
+jasa/submitted
+
+# files
+*.pdf
+*.eps
+*.png
+jasa/manhandled/*.svg
